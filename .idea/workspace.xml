@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config>
+        <device id="pixel_3a" />
+        <device id="Nexus 10" />
+        <device id="pixel_3a_xl" />
+        <device id="pixel_3" />
+        <device id="Nexus 5X" />
+        <device id="Nexus 6" />
+        <device id="pixel_c" />
+      </config>
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="haechilim" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="04f02afe-4c49-4079-ab83-a782fbe1a63f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/bookIt/app/src/main/java/com/example/bookit/helper/AsyncJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookIt/app/src/main/java/com/example/bookit/manager/ApiManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookIt/app/src/main/java/com/example/bookit/activity/DebateDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookIt/app/src/main/java/com/example/bookit/activity/DebateDetailActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookIt/app/src/main/java/com/example/bookit/activity/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookIt/app/src/main/java/com/example/bookit/activity/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookIt/app/src/main/java/com/example/bookit/activity/MarketDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookIt/app/src/main/java/com/example/bookit/activity/MarketDetailActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookIt/app/src/main/java/com/example/bookit/adapter/DebateListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookIt/app/src/main/java/com/example/bookit/adapter/DebateListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookIt/app/src/main/java/com/example/bookit/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookIt/app/src/main/java/com/example/bookit/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookIt/app/src/main/java/com/example/bookit/helper/DebateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookIt/app/src/main/java/com/example/bookit/manager/DebateManager.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="layoutResourceFile_vertical" />
+        <option value="layoutResourceFile" />
+        <option value="resourceFile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/bookIt" />
+  </component>
+  <component name="ProjectId" id="20gHvk5zBSjyYeylhVHeYXoJHJa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3a_API_30" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-11-09T12:09:45.357Z" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android-custom-viewD:/Dev/android/bookIt/app/src/main/java/com/example/bookit/view/UserView.java_SELECTED" value="UserView" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bookIt" />
+    <property name="multi-representation-previewD:/Dev/android/bookIt/app/src/main/java/com/example/bookit/view/UserView.java_selected" value="Custom views" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.1752977502">
+      <recent name="com.example.bookit.activity" />
+    </key>
+    <key name="android.template.-7308552">
+      <recent name="com.example.bookit.activity" />
+    </key>
+    <key name="android.template.-850392822">
+      <recent name="com.example.bookit.activity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Dev\android\bookIt\app\src\main\res\drawable-v24" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="BookIt.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04f02afe-4c49-4079-ab83-a782fbe1a63f" name="Default Changelist" comment="" />
+      <created>1636459543129</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636459543129</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="476" y="325" key="#PSD" timestamp="1637057408492">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="476" y="325" key="#PSD/0.0.1920.1160@0.0.1920.1160" timestamp="1637057408492" />
+    <state x="764" y="295" key="#com.intellij.ide.util.MemberChooser" timestamp="1636974389673">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="764" y="295" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1160@0.0.1920.1160" timestamp="1636974389673" />
+    <state x="412" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1636964489123">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="412" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1636964489123" />
+    <state x="689" y="325" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1636973086522">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="689" y="325" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1636973086522" />
+    <state x="539" y="334" key="AndroidCreateResourceFileDialog" timestamp="1636977571522">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="539" y="334" key="AndroidCreateResourceFileDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1636977571522" />
+    <state x="573" y="349" key="FileChooserDialogImpl" timestamp="1637057489763">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="573" y="349" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1637057489763" />
+    <state width="1874" height="320" key="GridCell.Tab.0.bottom" timestamp="1636974722033">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1874" height="320" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1636974722033" />
+    <state width="1874" height="320" key="GridCell.Tab.0.center" timestamp="1636974722033">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1874" height="320" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1636974722033" />
+    <state width="1874" height="320" key="GridCell.Tab.0.left" timestamp="1636974722033">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1874" height="320" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1636974722033" />
+    <state width="1874" height="320" key="GridCell.Tab.0.right" timestamp="1636974722033">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1874" height="320" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1636974722033" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1636867074816">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1636867074816" />
+  </component>
+</project>
