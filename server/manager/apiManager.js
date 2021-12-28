@@ -18,6 +18,18 @@ class ApiManager {
             callback(error, items);
         });
     }
+
+    requestRecommendedBooks(categoryId, count, callback) {
+        request(this.bestSeller + "?key=" + this.key + "&categoryId=" + categoryId + "&maxResults=" + count + "&output=json", (error, response, body) => {
+            let items = [];
+            
+            for(let i = 0; i < count; i++) {
+                items.push(JSON.parse(body).item[i]);
+            }
+
+            callback(error, items);
+        });
+    }
 }
 
 module.exports = ApiManager;

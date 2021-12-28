@@ -25,10 +25,24 @@ class Server {
 
                 request.on("data", (data) => post += data);
                 request.on("end", () => {
-                    /* let buf = Buffer.from(decodeURIComponent(post),'base64');
-  	                fs.writeFileSync("test.jpg", buf); */
+                    if(pathname == "/upload/image") {
+                        let random = "";
 
-                    this.processUrl(pathname, this.getParameters("?" + post), response)
+                        while(true) {
+                            random = Math.random().toString(36).substr(2,11);
+
+                            if (!fs.existsSync(random)) break;
+                        }
+
+                        let buf = Buffer.from(decodeURIComponent(post),'base64');
+                        fs.writeFileSync("image/" + random + ".jpg", buf);
+
+                        this.jsonResponse(response, {
+                            path: "/image/" + random + ".jpg"
+                        });
+                    }
+
+                    this.processUrl(pathname, this.getParameters("?" + post), response);
                 });
             }
             else this.processUrl(pathname, parameters, response);
@@ -44,9 +58,22 @@ class Server {
                 this.apiManager.requestBestSeller(data.count, (error, items) => this.response(response, error, items));
                 break;
 
-            case "/api/signup":
-                this.databaseManager.signup(data.name, data.id, data.password, (error) => this.response(response, error));
+            case "/api/recommendedBooks":
+                this.databaseManager.getNeeds(data.userId, (error, result) => {
+                    if(error) return;
+
+                    const index = Math.floor(Math.random() * (result.length));
+
+                    this.apiManager.requestRecommendedBooks(result[index].categoryId, data.count, (error, items) => this.response(response, error, items));
+                });
                 break;
+
+            case "/api/signup":
+                this.databaseManager.signup(decodeURIComponent(data.name), data.id, data.password, (error) => this.response(response, error));
+                break;
+
+            case "/api/selectNeeds":
+                this.databaseManager.selectNeeds(data.loginId, data.categoryId, (error) => this.response(response, error));
 
             case "/api/login":
                 this.databaseManager.login(data.id, data.password, (error, result) => this.response(response, error, result));
@@ -62,11 +89,13 @@ class Server {
 
             case "/api/debate":
                 this.databaseManager.getDebates(data.userId, (error, results) => {
-                    for(let i = 0; i < results.length; i++) {
-                        let result = results[i];
-                        
-                        if(result.cDate != null) result.cDate = new Date(result.cDate).getTime();
-                        result.date = new Date(result.date).getTime();
+                    if(results != undefined) {
+                        for(let i = 0; i < results.length; i++) {
+                            let result = results[i];
+                            
+                            if(result.cDate != null) result.cDate = new Date(result.cDate).getTime();
+                            result.date = new Date(result.date).getTime();
+                        }
                     }
 
                     this.response(response, error, results)
@@ -78,19 +107,15 @@ class Server {
                 break;
 
             case "/api/market":
-                this.databaseManager.getMarket((error, results) => {
-                    for(let i = 0; i < results.length; i++) {
-                        let result = results[i];
-                        
-                        result.date = new Date(result.date).getTime();
-                    }
+                this.databaseManager.getMarket((error, results) => this.response(response, error, this.setDate(results)));
+                break;
 
-                    this.response(response, error, results);
-                });
+            case "/api/comments":
+                this.databaseManager.getComments(data.id, (error, results) => this.response(response, error, this.setDate(results)));
                 break;
 
             case "/api/vote":
-                this.databaseManager.vote(data.userId, data.debateId, data.isAgree, (error) => this.response(response, error))
+                this.databaseManager.vote(data.userId, data.debateId, data.isAgree, (error) => this.response(response, error));
                 break;
                 
             case "/api/write/debate":
@@ -102,15 +127,27 @@ class Server {
                 break;
 
             case "/api/write/market":
-                this.databaseManager.writeMarket(data.userId, decodeURIComponent(data.title), data.category, data.status, data.price, decodeURIComponent(data.contents), (error) => this.response(response, error));
+                this.databaseManager.writeMarket(data.userId, data.imageUrl, decodeURIComponent(data.title), data.category, data.status, data.price, decodeURIComponent(data.contents), (error) => this.response(response, error));
+                break;
+
+            case "/api/write/comment":
+                this.databaseManager.writeComment(data.userId, data.debateId, decodeURIComponent(data.contents), (error) => this.response(response, error));
                 break;
 
             case "/api/edit/readingDiary":
                 this.databaseManager.editReadingDiary(data.id, decodeURIComponent(data.title), decodeURIComponent(data.date), decodeURIComponent(data.contents), (error) => this.response(response, error));
                 break;
 
+            case "/api/edit/profile":
+                this.databaseManager.editProfile(data.userId, data.imageUrl, decodeURIComponent(data.name), (error) => this.response(response, error));
+                break;
+
             case "/api/delete/readingDiary":
                 this.databaseManager.deleteReadingDiary(data.id, (error) => this.response(response, error));
+                break;
+
+            default:
+                this.fileResponse(response, pathname);
                 break;
 
             /* case "/api/edit":
@@ -124,30 +161,19 @@ class Server {
                     else if(pathname == "/api/edit") this.databaseManager.editPost(data.id, title, contents, data.category, error => this.response(response, error));
                 }
                 break; */
-
-            default:
-                this.fileResponse(response, this.mapUrl(pathname));
-                break;
         }
     }
 
-    mapUrl(pathname) {
-        switch(pathname) {
-            case "/":
-                return "list.html";
-
-            case "/write":
-                return "write.html";
-
-            case "/contents":
-                return "contents.html";
-
-            case "/login":
-                return "login.html";
-            
-            default:
-                return pathname;
+    setDate(results) {
+        if(results != undefined) {
+            for(let i = 0; i < results.length; i++) {
+                let result = results[i];
+                
+                result.date = new Date(result.date).getTime();
+            }
         }
+
+        return results;
     }
 
     response(response, error, result) {
